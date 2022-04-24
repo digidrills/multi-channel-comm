@@ -10,6 +10,8 @@
 - Interfaces with AWS-Lex, GCP-DialogFlow
 - Pricing
 
+Note: For one-way messages with a simple use-case, a good alternate is https://pypi.org/project/pywhatkit/
+
 ## Pre-requisites / Usage
 - Account on Twilio
 - Python 3.7+, Flask and associated components
@@ -78,3 +80,6 @@ Instead of writing our native python/similar code, Twilio can also be integrated
 AWS-Lex is not available in Mumbai as on Apr-2022
 
 Reference link - Create Your Own Amazon Lex Chatbot - Full tutorial ( <https://www.youtube.com/watch?v=Gy0C9g16DW0> )
+
+For one-way messages with a simple use-case, a good alternate is https://pypi.org/project/pywhatkit/
+
