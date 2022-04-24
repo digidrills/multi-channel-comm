@@ -15,7 +15,7 @@
 - Python 3.7+, Flask and associated components
 - Deploy to a public server
 
-Twilio Environment
+## Twilio Environment
 - Sandbox provided for testing (needs to be refreshed daily)
 - Identifiers are provisioned (AccountSid, AuthToken) and must be used to interface in all programs
 - Native TwiML (the Twilio Markup Language, which is just to say that it's an XML document with special tags defined by Twilio to help you build 
@@ -63,7 +63,7 @@ Considers Conversation Price + Per Msg Price + No.Users
 https://support.twilio.com/hc/en-us/articles/360037672734-How-Much-Does-it-Cost-to-Send-and-Receive-WhatsApp-Messages-with-Twilio-
 
 
-## THIS REPO HAS FOLL. FILES
+### THIS REPO HAS FOLL. FILES
 - wa-cli-send.py which is a simple program to send a msg (text, image) to a number
 - wa-send-recv.py which is a program that awaits an image from a number, and replies with an image to the same numer
 - wa-reminder.py which is a program that schedules reminders via whatsapp
@@ -72,8 +72,9 @@ In both wa-send-recv and wa-reminder,
 - the message call-back is at route /wa
 - the status call-back is at route /sts
 
-## ADDITIONAL INFO
-Instead of writing our native python/similar code, Twilio can also be integrated with AWS-Lex and GCP-DialogFlow
+### ADDITIONAL INFO
+Instead of writing our native python/similar code, Twilio can also be integrated with AWS-Lex and GCP-DialogFlow. In such cases, the AWS-Lex or similar platform has configuration to configure url-call-backs / web-hooks to the Twilio platform. Thus, after completing the AWS-Lex work, we only need to link with Twilio to send/recv the messages using the call-back config.
 
-Create Your Own Amazon Lex Chatbot - Full tutorial (AWS-Lex not available in Mumbai as on Apr-2022)
-<https://www.youtube.com/watch?v=Gy0C9g16DW0>
+AWS-Lex is not available in Mumbai as on Apr-2022
+
+Reference link - Create Your Own Amazon Lex Chatbot - Full tutorial ( <https://www.youtube.com/watch?v=Gy0C9g16DW0> )
