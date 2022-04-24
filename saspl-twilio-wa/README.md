@@ -1,6 +1,6 @@
-Twilio for WhatsApp
+# Twilio for WhatsApp
 
-Points Covered
+## Points Covered during evaluation
 - Twilio Environment
 - One-Way Message
 - Two-Way Message
@@ -10,7 +10,7 @@ Points Covered
 - Interfaces with AWS-Lex, GCP-DialogFlow
 - Pricing
 
-Pre-requisites / Usage
+## Pre-requisites / Usage
 - Account on Twilio
 - Python 3.7+, Flask and associated components
 - Deploy to a public server
@@ -25,7 +25,7 @@ your messaging and voice applications)
 - To use own phone number and brand name with WhatsApp, the account must be approved by WhatsApp. 
 - This approval is provided only for brands that the company owns
 
-Twilio Application Panel
+## Twilio Application Panel
 - Use to setup the sandbox
 - Use to authorize whats-app number
 - Use to send one-way message (can be done via panel itself)
@@ -33,7 +33,7 @@ Twilio Application Panel
 - Configure web-hooks for 2-way application routing
 - Monitor Logs
 
-To Consider
+## Points To Consider When Developing
 - the on-boarding and authorization of WhatsApp numbers
 - de-authorize or change the WhatsApp numbers
 - a full-flow consists of many states <send, deliver, read, not-deliver>
@@ -41,11 +41,11 @@ To Consider
 - auth-tokens may be refreshed periodically, and the latest to be taken in program
 - credit-balance to be monitored and auto-modified based on traffic
 
-First complete the following video to get sense of the basic approach
+### First complete the following video to get sense of the basic approach
 WhatsApp Bot using Twilio and Python (Part-1) | Setting up Twilio Sandbox for WhatsApp
 <https://www.youtube.com/watch?v=BKK5NMDC0fk>
 
-Message Dumps
+### Message Dumps
 - User messages are received with the following "request.data" formats
     Fields are SmsMessageSid, NumMedia, ProfileName, SmsSid, WaId, SmsStatus, Body, To, NumSegments, ReferralNumMedia, MessageSid, AccountSid, From, ApiVersion
 
@@ -58,12 +58,12 @@ b'SmsMessageSid=SM45e9b726c0314a5524cXXXX&NumMedia=0&ProfileName=Ranjit+Sankar&S
 EXAMPLE OF STATUS MESSAGE RCVD (FROM CALLBACK)
 b'SmsSid=SMc4c96554c26604013c6b7f1b4bXXXXX&SmsStatus=sent&MessageStatus=sent&ChannelToAddress=%2B91994541XXXX&To=whatsapp%3A%2B919900000000&ChannelPrefix=whatsapp&MessageSid=SMc4c96554c26604013c6b7f1b4b6DDDDD&AccountSid=AC8e904faad99a05efe123e12515ZZZZZ&StructuredMessage=false&From=whatsapp%3A%2B14155238886&ApiVersion=2010-04-01&ChannelInstallSid=XEcc20d939f803ee381f2442185EEEEE'
 
-INDICATIVE PRICING
+### INDICATIVE PRICING
 Considers Conversation Price + Per Msg Price + No.Users
 https://support.twilio.com/hc/en-us/articles/360037672734-How-Much-Does-it-Cost-to-Send-and-Receive-WhatsApp-Messages-with-Twilio-
 
 
-THIS REPO HAS FOLL. FILES
+## THIS REPO HAS FOLL. FILES
 - wa-cli-send.py which is a simple program to send a msg (text, image) to a number
 - wa-send-recv.py which is a program that awaits an image from a number, and replies with an image to the same numer
 - wa-reminder.py which is a program that schedules reminders via whatsapp
@@ -72,7 +72,7 @@ In both wa-send-recv and wa-reminder,
 - the message call-back is at route /wa
 - the status call-back is at route /sts
 
-ADDITIONAL INFO
+## ADDITIONAL INFO
 Instead of writing our native python/similar code, Twilio can also be integrated with AWS-Lex and GCP-DialogFlow
 
 Create Your Own Amazon Lex Chatbot - Full tutorial (AWS-Lex not available in Mumbai as on Apr-2022)
